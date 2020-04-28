@@ -11,10 +11,20 @@ $("#search-button").click(function(){
         // var pic_url = data.data[0].images.original.url
     
         data.forEach(function(song){
-	     $(".container").html("<h1>" + data[0].title + "</h1>")
-
-        $(".container").append(`<img src=` + data[0].artwork_url + '>');
-	    
+         $(".gallery").append('<div class= "container" >'  ) 
+         $(".gallery").append('<div class= "col-4" >'  ) 
+         
+         $(".gallery").append("<h1>" + song.title + "</h1>")
+         $(".gallery").append("</div>" ) 
+        $(".gallery").append('<div class= "col-4" >'  ) 
+         
+        $(".gallery").append(`<img src=` + song.artwork_url + '>');
+        $(".gallery").append("</div>" ) 
+        $(".gallery").append('<div class= "col-4" >'  ) 
+         
+        $(".gallery").append("<h1>" + song.duration + "</h1>")
+        $(".gallery").append("</div>" ) 
+        $(".gallery").append("</div>" )
 	    });
     }); 
 
