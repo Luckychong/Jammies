@@ -12,18 +12,15 @@ $("#search-button").click(function(){
     
         data.forEach(function(song){
          $(".gallery").append('<div class= "container" >'  ) 
-         $(".gallery").append('<div class= "col-4" >'  ) 
-         
-         $(".gallery").append("<h1>" + song.title + "</h1>")
-         $(".gallery").append("</div>" ) 
-        $(".gallery").append('<div class= "col-4" >'  ) 
-         
-        $(".gallery").append(`<img src=` + song.artwork_url + '>');
-        $(".gallery").append("</div>" ) 
-        $(".gallery").append('<div class= "col-4" >'  ) 
-         
-        $(".gallery").append("<h1>" + song.duration + "</h1>")
-        $(".gallery").append("</div>" ) 
+            $(".gallery").append('<div class= "col-4" >'  ) 
+                $(".gallery").append(`<a href= "${song.permalink_url}">` + song.title + "</a>")
+            $(".gallery").append("</div>" ) 
+            $(".gallery").append('<div class= "col-4" >'  ) 
+                $(".gallery").append(`<img src=` + song.artwork_url + '>');
+            $(".gallery").append("</div>" ) 
+            $(".gallery").append('<div class= "col-4" >'  ) 
+                $(".gallery").append("<h1>" + song.duration + "</h1>")
+            $(".gallery").append("</div>" ) 
         $(".gallery").append("</div>" )
 	    });
     }); 
